@@ -1,4 +1,4 @@
-let user = { id: "USR01", name: "Anggit", balance: "Unlimited" };
+let user = { id: "USR01", name: "Username", balance: "Unlimited" };
 
 let items = [
   {

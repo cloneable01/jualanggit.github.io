@@ -1,57 +1,190 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Jualanggit</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Content</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Content</a>
-            </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About US</a>
-          </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+<head>
+  <link rel="stylesheet" href="./ecommerce.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="#">Jualanggit</a></div>
+    <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <section>
+    <div class="section">
+      <div class="section1">
+        <div class="img-slider">
+          <img src="img/sepatu kuning.jpg" alt="" class="img">
+          <img src="img/sepatu pink biru.jpg" alt="" class="img">
+          <img src="img/sepatu putih.jpg" alt="" class="img">
+          <img src="img/sepatu ultrabounce.jpg" alt="" class="img">
+          <img src="img/sepatubiru.jpg" alt="" class="img">
         </div>
+
       </div>
-    </nav>
-    </nav>
-  </body>
+      <div class="section2">
+        <div class="container">
+          <div class="items">
+            <div class="img img1"><img src="image/adidastop.jpg" alt=""></div>
+            <div class="name">ADIDAS</div>
+            <div class="price">Rp. 1.100.000</div>
+            <div class="info">Adidas Top Sala Men's Futsal Shoes - White</div>
+          </div>
+          <div class="items">
+            <div class="img img2"><img src="image/adidastopsala.jpg" alt=""></div>
+            <div class="name">ADIDAS</div>
+            <div class="price">Rp. 1.100.000 </div>
+            <div class="info">Adidas Top Sala Indoor Men's Futsal Shoes - Black</div>
+          </div>
+          <div class="items">
+            <div class="img img3"><img src="image/converserchuck.jpg" alt=""></div>
+            <div class="name">CONVERSE</div>
+            <div class="price">Rp. 1.099.000</div>
+            <div class="info">Converse Chuck 70 Vintage Canvas Unisex  - Red</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/hokamach.jpg" alt=""></div>
+            <div class="name">HOKA</div>
+            <div class="price">Rp. 2.499.000</div>
+            <div class="info">Hoka Mach 5 Women's Running - White/Flame</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/Reebokmid.jpg" alt=""></div>
+            <div class="name">REEBOK</div>
+            <div class="price">Rp. 2.229.000</div>
+            <div class="info">Reebok Question Mid Men's Classic - White</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/asics1.jpg" alt=""></div>
+            <div class="name">ASICS</div>
+            <div class="price">Rp. 2.399.000</div>
+            <div class="info">Asics GEL-NIMBUS 24 Men's Running - Green</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/nike.jpg" alt=""></div>
+            <div class="name">Nike</div>
+            <div class="price">Rp. 1.125.000</div>
+            <div class="info">Nike Court Legacy Lift Women's Shoes - White</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/newbalance.jpg" alt=""></div>
+            <div class="name">NEW BALANCE</div>
+            <div class="price">Rp. 1.299.000</div>
+            <div class="info">New Balance Fresh Foam Roav V2 Men's Running</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/secker.jpg" alt=""></div>
+            <div class="name">SKECHERS</div>
+            <div class="price">Rp. 1.299.000</div>
+            <div class="info">Skechers Go Run Arch Fit Men's Sneakers - White</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/pumavelo.jpg" alt=""></div>
+            <div class="name">PUMA</div>
+            <div class="price">Rp. 1.999.000</div>
+            <div class="info">Puma Velocity Nitro 2 Women's Running - Pink</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/converseunisex.jpg" alt=""></div>
+            <div class="name">CONVERSE</div>
+            <div class="price">Rp. 759.000</div>
+            <div class="info">Converse Unisex Chuck Taylor Original - Black</div>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="image/reebokclub.jpg" alt=""></div>
+            <div class="name">REEBOK</div>
+            <div class="price">Rp. 1.599.000</div>
+            <div class="info">Reebok CLUB C 1985 TV Sneakers- Paperwhite </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <div class="footer0">
+      <h1>Jualanggit</h1>
+    </div>
+    <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+    <div class="footer3"><h4>Jualanggit</h4> 2023</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>

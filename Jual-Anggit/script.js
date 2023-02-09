@@ -5,40 +5,139 @@ let items = [
     id: "ITMS01",
     name: "Adiboss",
     image: "adiboss.jpg",
-    qty: 10,
-    price: 10000,
+    price: 100000,
   },
   {
     id: "ITMS02",
     name: "Asicks1",
     image: "asicks1.jpg",
-    qty: 10,
-    price: 10000,
+    price: 250000,
   },
   {
     id: "ITMS03",
     name: "Erbook",
     image: "erbook.jpg",
-    qty: 10,
-    price: 10000,
+    price: 125000,
   },
   {
     id: "ITMS04",
     name: "Erbook Mid",
     image: "erbook-mid.jpg",
-    qty: 10,
-    price: 10000,
+    price: 300000,
   },
   {
-    id: "ITMS04",
+    id: "ITMS05",
     name: "Keke",
     image: "keke.jpg",
-    qty: 10,
-    price: 10000,
+    price: 175000,
+  },
+  {
+    id: "ITMS06",
+    name: "Adiboss Stop",
+    image: "adiboss-stop.jpg",
+    price: 274999,
+  },
+  {
+    id: "ITMS07",
+    name: "Convert Chuck",
+    image: "convertchuck.jpg",
+    price: 249999,
+  },
+  {
+    id: "ITMS08",
+    name: "Convert Unisex",
+    image: "convertunisex.jpg",
+    price: 249999,
+  },
+  {
+    id: "ITMS09",
+    name: "Hokamars",
+    image: "hokamars.jpg",
+    price: 235000,
+  },
+  {
+    id: "ITMS010",
+    name: "Old Balance",
+    image: "oldbalance.jpg",
+    price: 249999,
+  },
+  {
+    id: "ITMS11",
+    name: "Puma Velo",
+    image: "pumavelo.jpg",
+    price: 199999,
+  },
+  {
+    id: "ITMS12",
+    name: "Erbook Club",
+    image: "erbookclub.jpg",
+    price: 134000,
   },
 ];
 
 let userPurchaseHistory = [];
+
+function confirmPayment(itemId) {
+  console.log(itemId);
+  let selected = items.find(({ id }) => id === itemId);
+
+  console.log(items);
+  console.log(selected);
+  const deleteItems = items.findIndex((items) => items.id === itemId);
+  items.splice(deleteItems, 1);
+  // delete selected;
+
+  userPurchaseHistory.push(selected);
+
+  let purchased = "";
+  userPurchaseHistory.map(
+    (data) =>
+      (purchased += `
+    <div class="border-bottom border-dark my-3">
+    <h5 class="card-title">${data.name}</h5>
+    <br />
+    <img
+      src="./images/${data.image}"
+      class="card-img-top border shadow-sm"
+      alt="Hollywood Sign on The Hill"
+    />
+    <div class="card-body">
+      <br />
+      <p class="card-text float-start w-100 pb-3">Price: <span class="float-end">IDR ${data.price}</span></p>
+      <p class="card-text">Status : <span class="float-end"><b>Pembelian Berhasil</b></span></p>
+      <br />
+    </div>
+  </div>`)
+  );
+
+  document.querySelector("#purchaseHistory").innerHTML = purchased;
+
+  let content = "";
+  items.map(
+    (data) =>
+      (content += `
+<div class="col">
+  <div class="card">
+    <img
+      src="./images/${data.image}"
+      class="card-img-top"
+      alt="Hollywood Sign on The Hill"
+    />
+    <div class="card-body">
+      <h5 class="card-title">${data.name}</h5>
+      <p class="card-text">
+        Price: IDR ${data.price}
+      </p>
+      <button type="button" data-bs-toggle="modal" data-bs-target=${
+        "#" + data.id
+      } class="btn btn-primary w-100">Buy</button>
+    </div>
+  </div>
+</div>`)
+  );
+
+  document.querySelector("#container").innerHTML = content;
+}
 
 let content = "";
 items.map(
@@ -53,9 +152,9 @@ items.map(
     />
     <div class="card-body">
       <h5 class="card-title">${data.name}</h5>
-      <p class="card-text">
-        Price: IDR ${data.price}
-      </p>
+      <p class="card-text float-start w-100">Price: <span class="float-end">IDR ${
+        data.price
+      }</span></p>
       <button type="button" data-bs-toggle="modal" data-bs-target=${
         "#" + data.id
       } class="btn btn-primary w-100">Buy</button>
@@ -103,7 +202,7 @@ items.map(
               <p class="card-text float-start w-100 border-bottom border-dark pb-3">Price: <span class="float-end">IDR ${data.price}</span></p>
               <p class="card-text float-start w-100">Your Money: <span class="float-end"><b>${user.balance}</b></span></p>
 
-              <button type="button" class="btn btn-primary w-100">
+              <button type="button" onclick=confirmPayment("${data.id}") class="btn btn-primary w-100" data-bs-dismiss="modal">
                 Confirm
               </button>
             </div>
@@ -115,7 +214,3 @@ items.map(
 );
 
 document.querySelector("#modal").innerHTML = modal;
-
-// function modal(id) {
-//   document.getElementById("Filler").id = "Filler2";
-// }

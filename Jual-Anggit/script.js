@@ -3,36 +3,36 @@ let user = { id: "USR01", name: "Anggit", balance: "Unlimited" };
 let items = [
   {
     id: "ITMS01",
-    name: "Air Jordan 1",
-    image: "airjordan.jpg",
+    name: "Adiboss",
+    image: "adiboss.jpg",
     qty: 10,
     price: 10000,
   },
   {
     id: "ITMS02",
-    name: "Nike x Swallow",
-    image: "nike_x_swallow.jpg",
+    name: "Asicks1",
+    image: "asicks1.jpg",
     qty: 10,
     price: 10000,
   },
   {
     id: "ITMS03",
-    name: "Andallas",
-    image: "andallas.jpg",
+    name: "Erbook",
+    image: "erbook.jpg",
     qty: 10,
     price: 10000,
   },
   {
     id: "ITMS04",
-    name: "Air Jordan 2",
-    image: "Air Jordan 2.jpg",
+    name: "Erbook Mid",
+    image: "erbook-mid.jpg",
     qty: 10,
     price: 10000,
   },
   {
     id: "ITMS04",
-    name: "Air Jordan KW",
-    image: "Air Jordan KW.jpg",
+    name: "Keke",
+    image: "keke.jpg",
     qty: 10,
     price: 10000,
   },
@@ -47,7 +47,7 @@ items.map(
 <div class="col">
   <div class="card">
     <img
-      src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+      src="./images/${data.image}"
       class="card-img-top"
       alt="Hollywood Sign on The Hill"
     />
@@ -93,7 +93,7 @@ items.map(
         <div class="modal-body">
           <div class="card">
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+              src="./images/${data.image}"
               class="card-img-top"
               alt="Hollywood Sign on The Hill"
             />
